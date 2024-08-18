@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #d3d3d3;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 1.5%;
+    left: 20vw;
+    right: 2vw;
+    background-color: #eeeeee;
+    color: #333;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #dddddd;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    height: 100vh; 
+}
+
+nav .logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 38px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    width: 126px;
+    color: #666;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #cccccc;
+    color: #000; 
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Main */
+main {
+    margin-top: 6%;
+    margin-left: 270px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.haircut-detail {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.haircut-detail figure {
+    margin: 0;
+    flex: 1;
+}
+
+.haircut-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.haircut-description {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.haircut-description h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* Cinza escuro */
+    margin-bottom: 10px;
+}
+
+.haircut-description p {
+    font-family: 'Inter', sans-serif;
+    margin: 3rem 0 15px;
+}
+
+.haircut-description #preco {
+    font-weight: 700;
+    color: #000;
+    margin-top: 8rem;
+    text-align: end;
+}
+
+/* media query */
+@media (max-width: 768px) {
+    nav {
+        width: 200px;
+    }
+    
+    .haircut-detail {
+        flex-direction: column;
+    }
+
+    .haircut-description {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 100%;
+        position: relative;
+        height: auto;
+        box-shadow: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .haircut-detail {
+        flex-direction: column;
+    }
+
+    .haircut-description {
+        margin-top: 20px;
+    }
+}
